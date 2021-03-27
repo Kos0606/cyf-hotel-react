@@ -1,11 +1,12 @@
 import React from "react";
-
 import Bookings from "./Bookings";
 import "./App.css";
 import searchButton from "./searchButton";
 import Heading from "./Heading";
 import TouristInfoCards from "./TouristInfoCards";
 import Footer from "./Footer";
+import Restaurant from "./Restaurant";
+import RestaurantButton from "./RestaurantButton";
 
 const App = () => {
   return (
@@ -13,6 +14,8 @@ const App = () => {
       {/* <header className="App-header">CYF Hotel</header> */}
       <TouristInfoCards />
       <Bookings />
+      <Restaurant />
+      <RestaurantButton />
       <searchButton />
       <Heading />
       <Footer
