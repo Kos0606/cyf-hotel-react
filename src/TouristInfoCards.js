@@ -32,7 +32,7 @@ const TouristInfoCards = () => {
           alt="Manchester"
         />
 
-        <div class="card-body">
+        <div className="card-body">
           <h4>
             <b>The City Of Manchester</b>
           </h4>
@@ -57,7 +57,7 @@ const TouristInfoCards = () => {
           alt="London"
         />
 
-        <div class="card-body">
+        <div className="card-body">
           <h4>
             <b>The City Of London</b>
           </h4>

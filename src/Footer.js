@@ -1,13 +1,12 @@
 import React from "react";
 
 const Footer = props => {
-  console.log(props);
   return (
     <div>
       <footer>
         <ul>
-          {props.address.map(location => (
-            <li>{location}</li>
+          {props.address.map((location, index) => (
+            <li key={index}>{location}</li>
           ))}
         </ul>
       </footer>
