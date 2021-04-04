@@ -64,7 +64,8 @@ const Bookings = () => {
               email: "anu@selvam.net",
               roomId: 3,
               checkInDate: "2017-08-30",
-              checkOutDate: "2017-10-02"
+              checkOutDate: "2017-10-02",
+              numberOfNight: ""
             }
           ]}
         />

@@ -19,6 +19,7 @@ const SearchResults = props => {
           <td>{guest.roomId}</td>
           <td>{guest.checkInDate}</td>
           <td>{guest.checkOutDate}</td>
+          <td>leaveDate.diif(checkIn, 'days')</td>
         </tr>
       );
     });
