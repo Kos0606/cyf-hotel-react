@@ -1,4 +1,5 @@
 import React from "react";
+import moment from "moment";
 
 const SearchResults = props => {
   function createTableHeader() {
@@ -9,9 +10,9 @@ const SearchResults = props => {
   }
   function createTableData() {
     return props.GuestInfo.map((guest, index) => {
-      // const checkIn = moment(guest.checkInDate);
-      // const checkOut = moment(guest.checkOutDate);
-      // const days = checkOut.diff(checkIn, "days");
+      const checkIn = moment(guest.checkInDate);
+      const checkOut = moment(guest.checkOutDate);
+      const days = checkOut.diff(checkIn, "days");
       return (
         <tr key={index}>
           <td>{guest.id}</td>
@@ -22,6 +23,7 @@ const SearchResults = props => {
           <td>{guest.roomId}</td>
           <td>{guest.checkInDate}</td>
           <td>{guest.checkOutDate}</td>
+          <td>{days}</td>
         </tr>
       );
     });
