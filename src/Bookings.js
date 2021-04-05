@@ -24,7 +24,8 @@ const Bookings = () => {
               email: "johndoe@doe.com",
               roomId: 2,
               checkInDate: "2017-11-21",
-              checkOutDate: "2017-11-23"
+              checkOutDate: "2017-11-23",
+              numberOfNights: ""
             },
             {
               id: 2,
@@ -34,7 +35,8 @@ const Bookings = () => {
               email: "begum_sadia@sadia.org",
               roomId: 1,
               checkInDate: "2018-02-15",
-              checkOutDate: "2018-02-28"
+              checkOutDate: "2018-02-28",
+              numberOfNights: ""
             },
             {
               id: 3,
@@ -44,7 +46,8 @@ const Bookings = () => {
               email: "harry@wales.com",
               roomId: 5,
               checkInDate: "2018-03-01",
-              checkOutDate: "2018-04-09"
+              checkOutDate: "2018-04-09",
+              numberOfNights: ""
             },
             {
               id: 4,
@@ -54,7 +57,8 @@ const Bookings = () => {
               email: "Judi@dench.co.uk",
               roomId: 6,
               checkInDate: "2017-12-25",
-              checkOutDate: "2018-01-03"
+              checkOutDate: "2018-01-03",
+              numberOfNights: ""
             },
             {
               id: 5,
@@ -64,7 +68,8 @@ const Bookings = () => {
               email: "anu@selvam.net",
               roomId: 3,
               checkInDate: "2017-08-30",
-              checkOutDate: "2017-10-02"
+              checkOutDate: "2017-10-02",
+              numberOfNights: ""
             }
           ]}
         />
