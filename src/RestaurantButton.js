@@ -1,7 +1,13 @@
 import React from "react";
 
-function RestaurantButton(props) {
-  return <div />;
-}
+const RestaurantButton = props => {
+  return (
+    <div>
+      <button className="btn btn-primary" onClick={props.orderOne}>
+        Add
+      </button>
+    </div>
+  );
+};
 
 export default RestaurantButton;

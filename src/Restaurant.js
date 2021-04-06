@@ -13,9 +13,9 @@ const Restaurant = () => {
       <ul>
         <li>
           Pizzas: {orders}{" "}
-          <button className="btn btn-primary" onClick={orderOne}>
+          {/* <button className="btn btn-primary" onClick={orderOne}>
             Add
-          </button>
+          </button> */}
         </li>
       </ul>
     </div>
