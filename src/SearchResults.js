@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import FakeBookings from "./data/fakeBookings.json";
 import moment from "moment";
 
 const SearchResults = props => {
+  const [color, setColor] = useState(false);
+  function highlight(e) {
+    setColor(!color);
+  }
+
   function createTableHeader() {
     let header = Object.keys(props.GuestInfo[0]);
     return header.map((key, index) => {
@@ -35,7 +41,9 @@ const SearchResults = props => {
 
       <table className="table">
         <tbody>
-          <tr>{createTableHeader()}</tr>
+          <tr className={color ? "colored" : null} onClick={setColor}>
+            {createTableHeader()}
+          </tr>
           {createTableData()}
         </tbody>
       </table>
