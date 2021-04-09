@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import moment from "moment";
+import CustomerProfile from "./CustomerProfile";
 
 const TableData = props => {
   const [color, setColor] = useState(null);
@@ -26,6 +27,7 @@ const TableData = props => {
             <td>{guest.checkInDate}</td>
             <td>{guest.checkOutDate}</td>
             <td>{days}</td>
+            <CustomerProfile id={guest.id} />
           </tr>
         );
       })}

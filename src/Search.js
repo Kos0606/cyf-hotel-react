@@ -4,15 +4,16 @@ import SearchButton from "./SearchButton";
 const Search = props => {
   const [searchInput, setSearchInput] = useState("");
 
+  function handleSearchInput(event) {
+    console.log(event.target.value);
+    setSearchInput(event.target.value);
+  }
+
   function onSubmitHandler(event) {
     event.preventDefault();
     props.search(searchInput);
   }
 
-  function handleSearchInput(event) {
-    console.log(event.target.value);
-    setSearchInput(event.target.value);
-  }
   return (
     <div className="search">
       <div className="page-header">
@@ -31,7 +32,8 @@ const Search = props => {
                 placeholder="Customer name"
                 onChange={handleSearchInput}
               />
-              <button className="btn btn-primary">Search</button>
+              <SearchButton />
+              {/* <button className="btn btn-primary">Search</button> */}
             </div>
           </form>
         </div>

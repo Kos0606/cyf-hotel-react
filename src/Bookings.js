@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Search from "./SearchButton";
+import Search from "./Search";
 import SearchResults from "./SearchResults";
 //import FakeBookings from "./data/fakeBookings.json";
 
