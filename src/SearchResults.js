@@ -1,53 +1,20 @@
 import React, { useState } from "react";
 import FakeBookings from "./data/fakeBookings.json";
-import moment from "moment";
+//import moment from "moment";
+import TableData from "./TableData";
 
 const SearchResults = props => {
-  const [color, setColor] = useState(false);
-  function highlight(e) {
-    setColor(!color);
-  }
-
-  function createTableHeader() {
-    let header = Object.keys(props.GuestInfo[0]);
-    return header.map((key, index) => {
-      return <th key={index}>{key.toUpperCase()}</th>;
-    });
-  }
-  function createTableData() {
-    return props.GuestInfo.map((guest, index) => {
-      const checkIn = moment(guest.checkInDate);
-      const checkOut = moment(guest.checkOutDate);
-      const days = checkOut.diff(checkIn, "days");
-      return (
-        <tr key={index}>
-          <td>{guest.id}</td>
-          <td>{guest.title}</td>
-          <td>{guest.firstName}</td>
-          <td>{guest.surname}</td>
-          <td>{guest.email}</td>
-          <td>{guest.roomId}</td>
-          <td>{guest.checkInDate}</td>
-          <td>{guest.checkOutDate}</td>
-          <td>{days}</td>
-        </tr>
-      );
-    });
-  }
-
   return (
-    <div>
-      <h2 id="title">Hotel Bookings</h2>
-
-      <table className="table">
-        <tbody>
-          <tr className={color ? "colored" : null} onClick={setColor}>
-            {createTableHeader()}
-          </tr>
-          {createTableData()}
-        </tbody>
-      </table>
-    </div>
+    <table>
+      <thead>
+        <tr>
+          {props.tableHead.map((key, index) => {
+            return <th key={index}>{key}</th>;
+          })}
+        </tr>
+      </thead>
+      <TableData GuestInfo={props.GuestInfo} />
+    </table>
   );
 };
 

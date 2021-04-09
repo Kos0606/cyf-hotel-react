@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import SearchButton from "./SearchButton";
 
-const Search = () => {
+const Search = props => {
   const [searchInput, setSearchInput] = useState("");
+
+  function onSubmitHandler(event) {
+    event.preventDefault();
+    props.search(searchInput);
+  }
 
   function handleSearchInput(event) {
     console.log(event.target.value);
@@ -19,6 +24,7 @@ const Search = () => {
             <label htmlFor="customerName">Customer name</label>
             <div className="search-row">
               <input
+                value={searchInput}
                 type="text"
                 id="customerName"
                 className="form-control"
